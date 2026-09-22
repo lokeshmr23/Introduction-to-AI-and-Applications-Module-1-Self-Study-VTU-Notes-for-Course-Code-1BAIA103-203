@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VTUHub · 1BAIA103 Introduction to AI</title>
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="logo">VH</div>
+      <div>
+        <h1>VTUHub Self-Learning</h1>
+        <p>1BAIA103 · Module 1 · Author: Dr. Lokesh M R, Professor, ISE, AJIET Mangaluru</p>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <button data-view="home" class="active">Home</button>
+      <button data-view="notes">Notes</button>
+      <button data-view="exam">Exam practice</button>
+      <button data-view="slides">Classroom slides</button>
+      <button data-view="video">Lecture video</button>
+      <button data-view="author">Author &amp; acknowledgement</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="view-home">
+      <div class="hero">
+        <h2>Prepare Module 1 the VTU way</h2>
+        <p>Read paraphrased notes (cited to your textbook), write answers as in the SEE paper, get a concept-wise comparison, and revise from slides or a spoken classroom lecture.</p>
+        <p class="cite">Class text: Dr. Lokesh M R, <em>Introduction to Artificial Intelligence and its Applications</em>, Module 1 Part A, Department of ISE, A J Institute of Engineering and Technology, Mangaluru (affiliated to VTU, Belagavi). Notes in this app are paraphrased in Indian English; figures and tables are redrawn and cited to avoid plagiarism.</p>
+        <p class="byline">Prepared under the guidance of <strong>Dr. Lokesh M R</strong>, Professor, Department of Information Science &amp; Engineering, AJIET, Mangaluru. <button class="btn ghost" data-go="author">Author, dedication &amp; acknowledgement</button></p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Classroom notes</h3>
+          <p>Definitions, history, types of AI, machine learning versus programming, Gardner’s intelligences — with figures, a formula box and Table 1.2.</p>
+          <button class="btn" data-go="notes">Open notes</button>
+        </div>
+        <div class="card">
+          <h3>2. VTU question paper practice</h3>
+          <p>2-mark, 6-mark and 10-mark questions in the usual VTU wording. Type your answer; we score coverage against the notes.</p>
+          <button class="btn" data-go="exam">Start writing</button>
+        </div>
+        <div class="card">
+          <h3>3. Slides + lecture video</h3>
+          <p>Classroom presentation and a video-style lecture (slides with browser speech). Use these when the checker asks you to revise a topic.</p>
+          <button class="btn" data-go="slides">Slides</button>
+          <button class="btn ghost" data-go="video">Video</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-notes" class="hidden">
+      <div class="grid" style="grid-template-columns: 260px 1fr;">
+        <div class="card">
+          <h3>Topics</h3>
+          <div class="topic-list" id="topicList"></div>
+        </div>
+        <div class="card note" id="noteBody"></div>
+      </div>
+    </section>
+
+    <section id="view-exam" class="hidden">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;">
+          <div>
+            <label>Paper set: </label>
+            <select id="paperSelect"></select>
+          </div>
+          <div>
+            <label>Filter marks: </label>
+            <select id="markFilter">
+              <option value="all">All</option>
+              <option value="2">2 marks</option>
+              <option value="6">5–6 marks</option>
+              <option value="10">8–10 marks</option>
+            </select>
+          </div>
+        </div>
+        <div id="qNav" style="margin-top:12px;"></div>
+      </div>
+      <div class="card" id="qCard"></div>
+      <div class="card hidden" id="resultCard"></div>
+    </section>
+
+    <section id="view-slides" class="hidden">
+      <div class="card">
+        <div class="slide-stage" id="slideStage"></div>
+        <div class="slide-nav">
+          <button class="btn ghost" id="prevSlide">Previous</button>
+          <span id="slidePos"></span>
+          <button class="btn" id="nextSlide">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-video" class="hidden">
+      <div class="card">
+        <h3>Classroom lecture (slides + speech)</h3>
+        <p>Press play. The lecture uses the browser’s speech engine in Indian English where available. You may pause or jump slides.</p>
+        <div class="video-box">
+          <div class="slide-stage" id="vidStage"></div>
+          <div>
+            <button class="btn" id="playVid">Play lecture</button>
+            <button class="btn ghost" id="pauseVid">Pause</button>
+            <button class="btn ghost" id="stopVid">Stop</button>
+            <p id="vidStatus" class="cite">Ready.</p>
+            <ol id="vidChapters"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-author" class="hidden">
+      <div class="hero author-hero">
+        <div class="author-mark">LMR</div>
+        <div>
+          <h2>Dr. Lokesh M R</h2>
+          <p class="role">Professor, Department of Information Science &amp; Engineering</p>
+          <p>A J Institute of Engineering and Technology, Mangaluru, Karnataka, India<br />
+          Affiliated to Visvesvaraya Technological University (VTU), Belagavi</p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Author of the class text</h3>
+        <p><strong>Dr. Lokesh M R</strong>, <em>Introduction to Artificial Intelligence and its Applications</em> (1BAIA103), Module 1 Part A — classroom textbook used as the sole source for figures, formulae and tables in this self-learning application.</p>
+        <p><strong>Qualifications:</strong> Ph.D. in Computer Science &amp; Engineering (Sathyabama Institute of Science and Technology) · M.Tech. in Information Technology (NIE, Mysore) · B.E. in Electronics &amp; Communication Engineering (PES College of Engineering, Mandya).</p>
+        <p>With over 22 years of teaching, research and administrative experience across premier institutions in Karnataka.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:lokeshmrmysore@gmail.com">lokeshmrmysore@gmail.com</a></p>
+          <p>Mobile: <a href="tel:+919964050926">+91 99640 50926</a></p>
+        </div>
+        <div class="card">
+          <h3>Research profiles</h3>
+          <ul class="links">
+            <li><a href="https://orcid.org/0000-0003-0025-7941" target="_blank" rel="noopener">ORCID: 0000-0003-0025-7941</a></li>
+            <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57687382800" target="_blank" rel="noopener">Scopus Author ID: 57687382800</a></li>
+            <li><a href="https://scholar.google.co.in/citations?user=CCfMxaMAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+            <li><a href="https://www.linkedin.com/in/lokesh-m-r-b6880b169/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/lokeshmr23" target="_blank" rel="noopener">GitHub: lokeshmr23</a></li>
+            <li><a href="https://vidwan.inflibnet.ac.in/profile/344450" target="_blank" rel="noopener">Vidwan profile 344450</a></li>
+            <li>Web of Science ID: JCF-0012-2023</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <h3>About the author</h3>
+        <p>Dr. Lokesh M R specialises in Cyber-Physical Systems, Artificial Immune Systems, Fault-Tolerant Computing and Multi-Agent Systems. He has published extensively in Scopus-indexed and UGC-approved journals, holds a granted patent, and currently supervises Ph.D. scholars under VTU, Belagavi.</p>
+        <p>He has delivered invited talks at FDPs, workshops and conferences, and has contributed to KSCST- and AICTE-funded research projects. He is a Life Member of CSI and ISTE.</p>
+      </div>
+      <div class="card dedication">
+        <h3>Dedication</h3>
+        <p>This book is dedicated to all VTU students who aspire to excel in their examinations.</p>
+      </div>
+      <div class="card">
+        <h3>Acknowledgement</h3>
+        <p>The author expresses gratitude to:</p>
+        <ul>
+          <li>Visvesvaraya Technological University, Belagavi, for the curriculum framework of 1BAIA103.</li>
+          <li>A J Institute of Engineering and Technology, Mangaluru, for infrastructure and academic support.</li>
+          <li>The class text — Dr. Lokesh M R, <em>Introduction to Artificial Intelligence and its Applications</em>, Module 1 Part A.</li>
+          <li>All students who provided feedback on the self-learning material.</li>
+          <li>Family, for constant support and encouragement.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p><strong>Dr. Lokesh M R</strong> · Professor, ISE · AJIET, Mangaluru (VTU, Belagavi)</p>
+    <p>Author: <em>Introduction to Artificial Intelligence and its Applications</em> (1BAIA103, Module 1 Part A)</p>
+    <p>VTUHub · For private study. Cite the textbook; do not submit these notes as your own.</p>
+    <p>
+      <a href="mailto:lokeshmrmysore@gmail.com">Email</a> ·
+      <a href="https://orcid.org/0000-0003-0025-7941" target="_blank" rel="noopener">ORCID</a> ·
+      <a href="https://github.com/lokeshmr23" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://scholar.google.co.in/citations?user=CCfMxaMAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    </p>
+  </footer>
+  <script src="static/js/content.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+</html>

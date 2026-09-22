@@ -1,36 +1,64 @@
-Getting Started with AI: My Module 1 Notes on "Introduction to AI and Applications" (1BAIA103/203)
+# VTUHub — 1BAIA103 Introduction to Artificial Intelligence
 
-Artificial Intelligence has moved from being a niche research topic to a subject every engineering student now studies from year one. As part of the VTU curriculum, "Introduction to AI and Applications" (Course Code: 1BAIA103 / 203) lays the groundwork for understanding what AI actually is, how it evolved, and where it's headed.
+Self-learning web application for **Visvesvaraya Technological University** course **1BAIA103: Introduction to Artificial Intelligence and its Applications**, Module 1 (Part A).
 
-I recently compiled my self-study notes for Module 1 of this course and have made them freely available for anyone who wants a structured starting point.
+## What you can do
 
-Why Module 1 Matters
+- Read **classroom notes** rewritten in Indian English with figures, formulae and tables, **cited** to the prescribed textbook so that you do not copy verbatim.
+- Practise **VTU-style SEE/CIE questions** (2 marks, 5–6 marks, 8–10 marks).
+- **Type your answer**; the app compares it with the model notes, scores concept coverage and **suggests** which notes, slides or video lecture to revise.
+- Watch a **classroom slide deck** and a **video-style lecture** (slides + spoken narration in the browser).
 
-Before diving into machine learning models, neural networks, or generative AI tools, it's essential to build a solid conceptual foundation. Module 1 typically covers:
+## Academic honesty / citations
 
-What Intelligence Means — human vs. artificial intelligence, and the philosophical questions behind "can machines think?"
-History and Evolution of AI — from early symbolic AI and expert systems to the modern deep learning era
-Types of AI — narrow AI vs. general AI, reactive machines, limited memory systems, and the theoretical categories used to classify intelligent systems
-AI Application Areas — how AI is reshaping healthcare, finance, transportation, agriculture, and everyday consumer technology
-Foundational Terminology — agents, environments, rationality, and the basic vocabulary needed for the rest of the course
+All figures, tables and formulae are **redrawn** from the Module 1 textbook (the attached *Introduction to Artificial Intelligence* notes). Running text is **paraphrased**. Every note block cites the source section (for example, Textbook §1.1, Fig. 1.4, Table 1.2). Do not paste these notes into university submissions without your own wording.
 
-Getting these fundamentals right early makes every subsequent module — search algorithms, knowledge representation, machine learning — much easier to grasp.
+## Local run
 
-Why I'm Sharing These Notes
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
+```
 
-Self-study notes often live buried in someone's personal folder, disconnected from the people who could actually use them. I wanted to change that for my own notes by publishing them on Zenodo, an open-access repository, so they're:
+Open http://127.0.0.1:5000
 
-Freely accessible to any student following the same or a similar syllabus
-Properly citable, with a permanent DOI
-Easy to reference in study groups, assignments, or further research
-Access the Notes
+## Host for free (no credit card)
 
-📖 Citation: Lokesh M R. (2026). Introduction to AI and Applications Module 1 Self Study VTU Notes for Course Code 1BAIA103 / 203. Zenodo.
+**Do not use Render Blueprint** — it now asks for payment (the Stripe popup).
 
-🔗 DOI: https://doi.org/10.5281/zenodo.21965673
+Use **GitHub Pages** instead. Full steps: [DEPLOY-FREE.md](DEPLOY-FREE.md).
 
-If you're a VTU student tackling this course, or simply curious about how AI fundamentals are taught, feel free to download the notes, share them with classmates, and let me know if they help.
+1. Push this repo (must include the `docs/` folder).
+2. GitHub → **Settings → Pages** → Branch `main` → folder `/docs` → Save.
+3. Site URL: `https://lokeshmr23.github.io/VTUHub-1BAIA103/`
 
-Found this useful? A like, share, or comment helps other students discover it too. Feedback and corrections are always welcome — this is a living resource I hope to keep improving.
+## Push to GitHub
 
-#VTU #ArtificialIntelligence #AI #EngineeringEducation #OpenAccess #Zenodo #StudyNotes #IntroductionToAI #1BAIA103
+```bash
+cd vtuhub-1baia103
+git init
+git add .
+git commit -m "VTUHub 1BAIA103 Module 1 self-learning app"
+git branch -M main
+git remote add origin https://github.com/<your-username>/<repo>.git
+git push -u origin main
+```
+
+## Author
+
+**Dr. Lokesh M R**, Professor, Department of Information Science & Engineering, A J Institute of Engineering and Technology, Mangaluru (VTU, Belagavi).
+
+Class text: *Introduction to Artificial Intelligence and its Applications* (1BAIA103), Module 1 Part A.
+
+Contact: lokeshmrmysore@gmail.com · [ORCID](https://orcid.org/0000-0003-0025-7941) · [GitHub](https://github.com/lokeshmr23)
+
+## Course mapping
+
+| Code | Title |
+|------|--------|
+| 1BAIA103 | Introduction to Artificial Intelligence and its Applications |
+| Module 1 | What is AI, history, types of AI, ML vs programming, intelligence, applications |
+
+Textbook used: *Module 1 Part A* (scanned class textbook supplied by the faculty).
