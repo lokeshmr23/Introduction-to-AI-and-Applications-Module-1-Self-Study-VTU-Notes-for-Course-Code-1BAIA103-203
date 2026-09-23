@@ -1,0 +1,3 @@
+# render.yaml removed on purpose.
+# Render Blueprints require a credit card.
+# Use GitHub Pages from /docs — see DEPLOY-FREE.md
